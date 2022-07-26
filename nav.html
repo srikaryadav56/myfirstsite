@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1">
+        <style>
+            h1{
+                padding-left: 1rem;
+            }
+            :root{
+                --gap : 2rem;
+            }
+
+            body{
+                background-image: url(back-pic.jpg);
+                overflow-x: hidden;
+
+            }
+
+            header{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
+
+            ul{
+                display: flex;
+                column-gap: var(--gap);
+                background: hsl(0  0% 100% / 0.1);
+                backdrop-filter: blur(1rem);
+                padding-left: 1rem;
+            }
+
+            li{
+                list-style: none;
+                margin-bottom: 0;
+                padding-right: 1rem;         
+            }
+
+            a{
+                text-decoration: none;
+                color: white;               
+            }
+       
+            button{             
+                z-index: 1000;             
+            }
+
+            #mobile-nav{            
+                background: red;
+                display: none;
+            }
+
+           
+
+
+            @media(max-width : 500px){
+                #nav-b{
+                    position: fixed;
+                    inset: 0 0 0 45%;
+                    background: steelblue;
+                    flex-direction: column;
+                    margin: 0;
+                    padding: 8rem 2rem;
+                    background: hsl(0  0% 100% / 0.1);
+                    backdrop-filter: blur(0.7rem);
+
+                    transform: translateX(100%);
+                    transition: transform 300ms ease-in;
+                }
+
+                #nav-b[data-visible ="true"]{
+                    transform: translateX(0%);                 
+                }
+
+                li{
+                    margin-bottom: 1.5rem;
+                }
+
+                #mobile-nav{
+                    display: block;
+                    transition: 200ms;
+                    position: absolute;
+                    right: 10%;
+                    margin-top: 0.35rem;                  
+                }
+
+                #mobile-nav[area-expanded="true"]{
+                    background-color: aliceblue;
+                }
+
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <header>
+             <div>
+                <h1 style="color: white;">Srikar</h1>
+                 <p id="tony"></p>
+
+             </div>
+                    
+           <button id="mobile-nav" area-expanded="false" > <span class="sr-only">C</span></button>
+           
+           <nav>
+              <ul id="nav-b" data-visible="false" >
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Playlist</a>
+                </li>
+
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+
+                <li>
+                    <a href="#">Technology</a>
+                </li>
+              </ul>
+           </nav>
+        </header>
+        <script src="nav.js"></script>
+    </body>
+</html>

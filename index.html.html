@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <style>
+            div p{
+                display: inline-block;
+                margin-right: 0.5rem;
+            }
+
+            body{
+                text-align: center;
+                padding: 20px 5px;
+                background: rgb(144, 199, 213);
+            }
+
+            #use{
+                margin-right: 1.4rem;
+            }
+
+            #no-account{
+                margin-bottom: 0px;
+                
+            }
+
+            .div-btn{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .div-btn p{
+                color: red;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>Hi, Welcome to Srikar!</h1>
+            <div >
+                <p id="use">User Id</p>
+                <input id="userid-in" type="text">
+
+            </div>   
+            <div>
+                <p>Password</p>
+                <input id="password-in" type="text">
+            </div>
+
+            <div class="div-btn">
+                <button id="login-btn">Login</button>
+                <p id="no-account"></p>
+
+            </div>
+            
+            <div> 
+                <p>Dont have an account? </p>
+                <a href="create.html" id="create-a" >create one</a>
+            </div>
+            
+        </div>
+        <script src="login.js"></script>
+        
+
+    </body>
+</html>

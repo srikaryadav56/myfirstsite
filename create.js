@@ -14,7 +14,7 @@ createbtn.addEventListener("click", function(){
     sublist.push(createpassword.value)
     list.push(sublist)
     localStorage.setItem("jai",JSON.stringify(list))
-    location.href = "login.html";
+    location.href = "index.html";
 })
 
 
